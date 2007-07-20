@@ -2,7 +2,7 @@
 es_source l1csctpconfsrc = EmptyESSource {
     string recordName = "L1CSCTPParametersRcd"
     vuint32 firstValid = { 1 }
-    bool iovIsRunNotTime = false
+    bool iovIsRunNotTime = true
 }
 
 include "L1TriggerConfig/L1CSCTPConfigProducers/data/L1CSCTriggerPrimitivesConfig.cfi"
