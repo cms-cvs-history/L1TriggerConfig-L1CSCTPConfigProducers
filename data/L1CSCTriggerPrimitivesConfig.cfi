@@ -1,6 +1,10 @@
 
 es_module l1csctpconf = L1CSCTriggerPrimitivesConfigProducer {
 
+    # Switch between two sets of parameters: the default one, and the one
+    # used in MTCC.
+    bool isMTCC = false
+
     # Parameters for ALCT processors: default
     PSet alctParam = {
         uint32 alctFifoTbins   = 16
