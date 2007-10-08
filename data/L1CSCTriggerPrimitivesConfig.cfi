@@ -1,9 +1,12 @@
 
 es_module l1csctpconf = L1CSCTriggerPrimitivesConfigProducer {
 
-    # Switch between two sets of parameters: the default one, and the one
-    # used in MTCC.
+    # Defines the set of parameters used in MTCC.
     bool isMTCC = false
+
+    # Defines the set of parameters used in the minus-endcap slice test with
+    # the new TMB07 firmware.
+    bool isTMB07 = false
 
     # Parameters for ALCT processors: default
     PSet alctParam = {
@@ -18,7 +21,7 @@ es_module l1csctpconf = L1CSCTriggerPrimitivesConfigProducer {
         uint32 alctL1aWindow   =  5
     }
 
-    # Parameters for ALCT processors: MTCC-II
+    # Parameters for ALCT processors: MTCC-II and 2007 tests of new firmware
     PSet alctParamMTCC2 = {
 	uint32 alctFifoTbins   = 16
 	uint32 alctFifoPretrig = 10
@@ -31,7 +34,7 @@ es_module l1csctpconf = L1CSCTriggerPrimitivesConfigProducer {
 	uint32 alctL1aWindow   =  3
     }
 
-    # Parameters for CLCT processors: default
+    # Parameters for CLCT processors: default and 2007 tests of new firmware
     PSet clctParam = {
         uint32 clctFifoTbins   = 12
         uint32 clctFifoPretrig =  7
@@ -40,6 +43,11 @@ es_module l1csctpconf = L1CSCTriggerPrimitivesConfigProducer {
         uint32 clctHsThresh    =  2
         uint32 clctDsThresh    =  2
         uint32 clctNphPattern  =  4
+	# TMB07 parameters
+	uint32 clctHitThresh   =  2
+	uint32 clctPidThresh   =  2
+	uint32 clctSepSrc      =  1
+	uint32 clctSepVme      = 10
     }
 
     # Parameters for CLCT processors: MTCC-II
@@ -51,5 +59,10 @@ es_module l1csctpconf = L1CSCTriggerPrimitivesConfigProducer {
 	uint32 clctHsThresh    =  4
 	uint32 clctDsThresh    =  4
 	uint32 clctNphPattern  =  1
+	# TMB07 parameters
+	uint32 clctHitThresh   =  2
+	uint32 clctPidThresh   =  2
+	uint32 clctSepSrc      =  1
+	uint32 clctSepVme      = 10
     }
 }
