@@ -1,7 +1,7 @@
 
 es_source l1csctpconfsrc = EmptyESSource {
     string recordName = "L1CSCTPParametersRcd"
-    vuint32 firstValid = { 1 }
+    vuint32 firstValid = { 0 }
     bool iovIsRunNotTime = true
 }
 
