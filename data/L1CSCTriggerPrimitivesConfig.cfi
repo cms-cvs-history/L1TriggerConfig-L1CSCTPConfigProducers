@@ -6,7 +6,7 @@ es_module l1csctpconf = L1CSCTriggerPrimitivesConfigProducer {
 
     # Defines the set of parameters used in the minus-endcap slice test with
     # the new TMB07 firmware.
-    bool isTMB07 = false
+    bool isTMB07 = true
 
     # Parameters for ALCT processors: default
     PSet alctParam = {
